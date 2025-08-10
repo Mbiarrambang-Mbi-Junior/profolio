@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/file.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nexar|Link.</title>
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name" onclick="window.location.href='index.html'">Nexar|Link</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-search search-icon" onclick="toggleSearchBar()"></i>
+            </div>
+        </nav>
+
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="uil uil-times close-icon" onclick="toggleSearchBar()"></i>
+            </div>
+        </div>
+
+        <main class="wrapper">
+            
+           
+            <div class="main-blog-post">
+                <div class="post-header">
+                    <span class="post-category">Steps/Schematics & Code</span>
+                    <h1>Modern Login Form using only HTML and CSS — Google Like Design</h1>
+                    <div class="post-meta">
+                        <span>By Nexar|Linklix</span>
+                        <span>July 20, 2023</span>
+                        <span>Updated: April 16, 2024</span>
+                        <span>No Comments</span>
+                        <span>4 Mins Read</span>
+                    </div>
+                </div>
+                <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+            <button class="watch-btn">Watch on YouTube</button>
+    </iframe>
+</div>
+    <div class="post-video">
+                    <img src="video-placeholder.png" alt="Video preview" class="video-preview-img">
+                    <button class="watch-btn">Watch on YouTube</button>
+                    <div class="video-overlay">
+                        <img src="google-like-form.png" alt="Schematics" class="overlay-image">
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                </div>
+
+                <div class="post-body">
+                    <p>In the fast-changing realm of web design, making a login form that looks good and is easy for people to use is very important. This complete guide will help you make a modern login form using only HTML and CSS. By the time you finish this step-by-step tutorial, you'll have a nice and adaptable login form that's similar to the simple style of Google. You can follow along with this guide to make your website more user-friendly and improve your web design abilities.</p>
+                    <p>Login forms are used in most of website and Application. The login form helps the user to **get access to website or web application they are Browse**. (To access their data).</p>
+                </div>
+            </div>
+            <div class="code-container">
+  <h2>Code</h2>
+  <pre><code>
+    &lt;section&gt;
+      ...
+      &lt;a href="#" class="forgot-link"&gt;Forgot password?&lt;/a&gt;
+      ...
+    &lt;/section&gt;
+  </code></pre>
+</div>
+            <aside class="sidebar">
+                <div class="sidebar-section follow-us">
+                    <h4>Follow Us</h4>
+                    <a href="#" class="social-btn youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-btn tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+                <div class="sidebar-section recent-posts">
+                    <h4>Recent Posts</h4>
+                    <a href="#" class="recent-post-item">
+                        <img src="/img/Gemini_Generated_Image_i0qs31i0qs31i0qs-removebg-preview.png" alt="Post thumbnail">
+                        <div>
+                            <p>How to Animate with CSS @property Like a Pro</p>
+                        </div>
+                    </a>
+                    <a href="#" class="recent-post-item">
+                        <img src="/img/3D PRODUCT ANIMATION.jpeg" alt="Post thumbnail">
+                        <div>
+                            <p>Build a Seamless PHP & AJAX Login and Registration System with No Page Reloads!</p>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div class="top-footer">
+                <p>Nexar|Link.</p>
+            </div>
+            <div class="footer-social-icons">
+                <div class="icon"><i class="uil uil-instagram"></i></div>
+                <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+                <div class="icon"><i class="uil uil-dribbble"></i></div>
+                <div class="icon"><i class="uil uil-github-alt"></i></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">John Doe</a> - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/project.js"></script>
+</body>
+</html>

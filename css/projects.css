@@ -1,0 +1,361 @@
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root {
+    --body-color: #beb0b072;
+    --color-white: #ffffff;
+    --text-color-second: #444444;
+    --text-color-third: #00C896;
+    --first-color: #00C896;
+    --first-color-hover: #00C896; /* Redundant, can be removed if same as --first-color */
+    --second-color: #00C896;
+    --third-color: #F39C12;
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* New variables for search bar */
+    --search-overlay-bg: rgba(25, 24, 84, 0.9);
+    --search-wrapper-bg: #181872; /* Use a dark background from your other code */
+    --search-input-color: #ffffff;
+    --search-placeholder-color: #888888;
+}
+
+/* ----- BASE ----- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- SCROLLBAR DESIGN ----- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* ---##-- REUSABLE CSS --##--- */
+.btn {
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s, color 0.4s;
+}
+.btn > i {
+    margin-left: 10px;
+}
+.btn:hover {
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+i {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    padding-inline: 10vw;
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--color-white);
+    padding-inline: 9vw;
+    transition: 0.3s;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Add this to vertically align all nav items */
+}
+
+.nav-logo {
+    position: relative;
+    cursor: pointer;
+}
+.nav-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--third-color);
+}
+
+.nav-menu, .nav_menu_list {
+    display: flex;
+    align-items: center; /* Vertically align menu items */
+}
+.nav-menu .nav_list {
+    list-style: none;
+    position: relative;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+
+.nav-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between the icons */
+}
+.nav-menu-btn i {
+    font-size: 28px;
+    color: var(--text-color-third);
+    cursor: pointer;
+}
+
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: 0.3s;
+}
+.active-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+/* ----- SEARCH BAR STYLES (New) ----- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.search-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--search-input-color);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: var(--text-color-second);
+    outline: none;
+}
+.search-input::placeholder {
+    color: var(--search-placeholder-color);
+}
+.close-icon {
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
+.search-icon {
+    font-size: 28px;
+    color: var(--text-color-third);
+    cursor: pointer;
+}
+
+/* ----- PRODUCT CARD SECTION ----- */
+.product-card {
+    width: 100%;
+    margin-top: 100px;
+    gap: 10px;
+}
+.product-card h2 {
+    color: var(--text-color-second);
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-card h2 a {
+    text-decoration: none;
+    color: var(--c);
+    font-weight: 500;
+    font-size: 20px;
+}
+.product-items {
+    display: grid; /* Use grid for layout */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+.item {
+    width: 100%;
+    height: 300px;
+    padding-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Hide anything outside the card */
+}
+
+/* Overlay for text readability */
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+}
+
+.item h2, .item p, .item-button {
+    position: relative;
+    z-index: 2; /* Put text and button on top of the overlay */
+}
+
+.w3-container p {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px;
+}
+.w3-container h2 {
+    color: var(--color-white);
+    font-weight: 600;
+    margin: 10px;
+}
+.item .item-button button {
+    background-color: var(--third-color);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Background images for cards */
+.item:nth-child(1) { background-image: url('/img/3D PRODUCT ANIMATION.jpeg'); }
+.item:nth-child(2) { background-image: url('/img/Gemini_Generated_Image_i0qs31i0qs31i0qs-removebg-preview.png'); }
+.item:nth-child(3) { background-image: url('/img/64f55ff0-cf00-4416-b953-95d080fb22dd.jpeg'); }
+.item:nth-child(4) { background-image: url('/img/avatar.png'); }
+.item:nth-child(5) { background-image: url('/img/b38a0815-b5d1-474c-a030-484d5d8d5414.jpeg'); }
+.item:nth-child(6) { background-image: url('/img/Wallpaper (1).jpeg'); }
+
+
+/* ----- FOOTER ----- */
+footer {
+    width: 100%;
+    height: auto; /* Change to auto for better responsiveness */
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: var(--color-white);
+}
+footer p {
+    color: var(--text-color-second);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+footer .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ----- MEDIA QUERIES ----- */
+@media only screen and (max-width: 900px) {
+    .nav-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 90px);
+        background: var(--color-white);
+        transition: left 0.3s ease-in-out;
+    }
+    .nav-menu.responsive {
+        left: 0;
+    }
+    .nav-menu-btn {
+        display: flex;
+    }
+    .nav_menu_list {
+        flex-direction: column;
+    }
+    .nav-link {
+        color: var(--text-color-second);
+        margin: 10px 0;
+    }
+    .active-link::after {
+        content: none;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .product-items {
+        grid-template-columns: 1fr;
+    }
+}
